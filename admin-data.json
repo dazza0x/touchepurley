@@ -2,14 +2,14 @@
   "hours": [
     {
       "day": "Monday",
-      "opens": "9:00am",
-      "closes": "5:00pm",
-      "closed": false
+      "opens": "",
+      "closes": "",
+      "closed": true
     },
     {
       "day": "Tuesday",
       "opens": "9:00am",
-      "closes": "6:00pm",
+      "closes": "5:00pm",
       "closed": false
     },
     {
@@ -27,13 +27,13 @@
     {
       "day": "Friday",
       "opens": "9:00am",
-      "closes": "6:00pm",
+      "closes": "5:00pm",
       "closed": false
     },
     {
       "day": "Saturday",
       "opens": "8:00am",
-      "closes": "5:00pm",
+      "closes": "4:00pm",
       "closed": false
     },
     {
@@ -230,5 +230,5 @@
       }
     ]
   },
-  "formEndpoint": ""
+  "formEndpoint": "https://formspree.io/f/mdawlrzg"
 }
