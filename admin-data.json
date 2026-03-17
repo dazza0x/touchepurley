@@ -56,17 +56,17 @@
         {
           "name": "Gents Cut & Finish",
           "note": "Shampoo, cut and style",
-          "price": "from £35"
+          "price": "from £32"
         },
         {
           "name": "Blow Dry — Short",
           "note": "",
-          "price": "from £30"
+          "price": "from £32"
         },
         {
           "name": "Blow Dry — Long",
           "note": "",
-          "price": "from £35"
+          "price": "from £37"
         }
       ]
     },
@@ -77,22 +77,22 @@
         {
           "name": "Colour Regrowth",
           "note": "Root colour application",
-          "price": "from £69.50"
+          "price": "from £59"
         },
         {
           "name": "Semi-Permanent Colour",
           "note": "All-over tone or refresh",
-          "price": "from £81"
+          "price": "from £76"
         },
         {
           "name": "Highlighting",
           "note": "Foils, T-section or full head",
-          "price": "from £81"
+          "price": "from £76"
         },
         {
           "name": "Ultimate Balayage",
           "note": "Hand-painted, sun-kissed colour with toning",
-          "price": "from £169.50"
+          "price": "from £162"
         }
       ]
     },
@@ -108,7 +108,7 @@
         {
           "name": "Perming",
           "note": "Full perm or body wave",
-          "price": "from £75"
+          "price": "from £78"
         }
       ]
     },
