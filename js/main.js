@@ -78,4 +78,43 @@
     });
   }
 
+  /* ── Hero carousel ── */
+  var carouselSlides = document.querySelectorAll('.carousel__slide');
+  if (carouselSlides.length > 1) {
+    var carouselDots = document.querySelectorAll('.carousel__dot');
+    var prevBtn = document.querySelector('.carousel__btn--prev');
+    var nextBtn = document.querySelector('.carousel__btn--next');
+    var currentSlide = 0;
+    var autoTimer;
+
+    function carouselGoTo(n) {
+      carouselSlides[currentSlide].classList.remove('carousel__slide--active');
+      carouselDots[currentSlide].classList.remove('carousel__dot--active');
+      currentSlide = (n + carouselSlides.length) % carouselSlides.length;
+      carouselSlides[currentSlide].classList.add('carousel__slide--active');
+      carouselDots[currentSlide].classList.add('carousel__dot--active');
+    }
+
+    function startAuto() {
+      autoTimer = setInterval(function () { carouselGoTo(currentSlide + 1); }, 5000);
+    }
+
+    function resetAuto() {
+      clearInterval(autoTimer);
+      startAuto();
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function () { carouselGoTo(currentSlide - 1); resetAuto(); });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function () { carouselGoTo(currentSlide + 1); resetAuto(); });
+    }
+    carouselDots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { carouselGoTo(i); resetAuto(); });
+    });
+
+    startAuto();
+  }
+
 })();

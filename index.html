@@ -105,11 +105,17 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="section-hero" aria-label="Welcome to Touché Hairdressing">
-  <!-- Replace .hero::before gradient with a real background image via inline style:
-       style="background: url('images/hero.jpg') center/cover no-repeat;" -->
-  <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
-  <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
-  <div class="hero__glow hero__glow--3" aria-hidden="true"></div>
+
+  <!-- Full-bleed background carousel -->
+  <div class="hero__carousel" aria-hidden="true">
+    <img src="Images/hero_image_1.jpg" alt="" class="carousel__slide carousel__slide--active" loading="eager">
+    <img src="Images/hero_image_2.jpg" alt="" class="carousel__slide" loading="lazy">
+    <img src="Images/hero_image_3.jpg" alt="" class="carousel__slide" loading="lazy">
+    <img src="Images/hero_image_4.jpg" alt="" class="carousel__slide" loading="lazy">
+  </div>
+
+  <!-- Gradient overlay for text legibility -->
+  <div class="hero__overlay" aria-hidden="true"></div>
 
   <div class="hero__inner">
     <div class="hero__content">
@@ -122,10 +128,16 @@
       </div>
       <p style="margin-top:0.75rem;font-size:0.82rem;"><a href="tel:02086688855" style="color:rgba(255,255,255,0.58);">or call 020 8668 8855</a></p>
     </div>
+  </div>
 
-    <div class="hero__image">
-      <img src="Images/front%20header%20image.jpg" alt="Touché Hairdressing Purley — expert styling" loading="eager">
-    </div>
+  <!-- Carousel controls -->
+  <button class="carousel__btn carousel__btn--prev" aria-label="Previous image">&#8249;</button>
+  <button class="carousel__btn carousel__btn--next" aria-label="Next image">&#8250;</button>
+  <div class="carousel__dots" aria-hidden="true">
+    <span class="carousel__dot carousel__dot--active"></span>
+    <span class="carousel__dot"></span>
+    <span class="carousel__dot"></span>
+    <span class="carousel__dot"></span>
   </div>
 
   <div class="hero__scroll" aria-hidden="true">Scroll</div>
