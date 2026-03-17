@@ -51,22 +51,22 @@
         {
           "name": "Ladies Cut & Finish",
           "note": "Shampoo, cut and blow dry",
-          "price": "from £40"
+          "price": "from £50"
         },
         {
           "name": "Gents Cut & Finish",
           "note": "Shampoo, cut and style",
-          "price": "from £30"
+          "price": "from £35"
         },
         {
           "name": "Blow Dry — Short",
           "note": "",
-          "price": "from £25"
+          "price": "from £30"
         },
         {
           "name": "Blow Dry — Long",
           "note": "",
-          "price": "from £28"
+          "price": "from £35"
         }
       ]
     },
@@ -77,22 +77,22 @@
         {
           "name": "Colour Regrowth",
           "note": "Root colour application",
-          "price": "from £65"
+          "price": "from £69.50"
         },
         {
           "name": "Semi-Permanent Colour",
           "note": "All-over tone or refresh",
-          "price": "from £76"
+          "price": "from £81"
         },
         {
           "name": "Highlighting",
           "note": "Foils, T-section or full head",
-          "price": "from £79"
+          "price": "from £81"
         },
         {
           "name": "Ultimate Balayage",
           "note": "Hand-painted, sun-kissed colour with toning",
-          "price": "from £161.50"
+          "price": "from £169.50"
         }
       ]
     },
@@ -108,7 +108,7 @@
         {
           "name": "Perming",
           "note": "Full perm or body wave",
-          "price": "from £70"
+          "price": "from £75"
         }
       ]
     },
@@ -197,38 +197,7 @@
   ],
   "instagram": {
     "source": "manual",
-    "posts": [
-      {
-        "imageUrl": "Images/lauren-1.jpg",
-        "caption": "",
-        "link": "https://www.instagram.com/p/DVY0OQQDOdJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-      },
-      {
-        "imageUrl": "Images/SnapInsta.to_631792974_18035387429672302_531358247490902546_n.jpg",
-        "caption": "",
-        "link": "https://www.instagram.com/p/DUndQAWDN-5/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-      },
-      {
-        "imageUrl": "Images/SnapInsta.to_625055888_18034659248672302_7548183478368216786_n.jpg",
-        "caption": "",
-        "link": "https://www.instagram.com/p/DUIWllaDGMG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-      },
-      {
-        "imageUrl": "Images/SnapInsta.to_610287575_18031621283672302_4770361884095746334_n.jpg",
-        "caption": "",
-        "link": "https://www.instagram.com/p/DTDBmcBjOoj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-      },
-      {
-        "imageUrl": "Images/SnapInsta.to_625116822_18034157936672302_8915667283687551698_n.jpg",
-        "caption": "",
-        "link": "https://www.instagram.com/p/DUIWllaDGMG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-      },
-      {
-        "imageUrl": "Images/SnapInsta.to_626500957_17982903182951938_2298012603458986987_n.jpg",
-        "caption": "",
-        "link": "https://www.instagram.com/p/DULn-GBDNM9/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-      }
-    ]
+    "posts": []
   },
   "formEndpoint": "https://formspree.io/f/mdawlrzg"
 }
