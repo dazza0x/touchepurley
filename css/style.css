@@ -423,7 +423,7 @@ p:last-child { margin-bottom: 0; }
   display: block;
   width: 100%;
   height: 2px;
-  background: var(--white);
+  background: var(--ink);
   border-radius: 2px;
   transition: all var(--transition);
 }
@@ -2108,7 +2108,7 @@ p:last-child { margin-bottom: 0; }
   .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero__carousel { aspect-ratio: unset; min-height: 70vh; height: 70vh; }
-  .carousel__slide { object-position: center 20%; }
+  .carousel__slide { object-position: 62% 20%; }
   .hero__inner { padding: 5rem clamp(1.5rem, 5vw, 3rem) 5rem; }
   .hero__caption { display: none; }
   .intro-strip__stats { grid-template-columns: repeat(2, 1fr); }
