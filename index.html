@@ -106,7 +106,7 @@
 <!-- ===== HERO ===== -->
 <section class="hero" id="section-hero" aria-label="Welcome to Touché Hairdressing">
 
-  <!-- Full-bleed background carousel -->
+  <!-- Left panel — art-directed photograph, auto-rotating fade -->
   <div class="hero__carousel" aria-hidden="true">
     <img src="Images/hero_image_1.jpg" alt="" class="carousel__slide carousel__slide--active" loading="eager">
     <img src="Images/hero_image_2.jpg" alt="" class="carousel__slide" loading="lazy">
@@ -114,30 +114,19 @@
     <img src="Images/hero_image_4.jpg" alt="" class="carousel__slide" loading="lazy">
   </div>
 
-  <!-- Gradient overlay for text legibility -->
-  <div class="hero__overlay" aria-hidden="true"></div>
+  <div class="hero__caption" aria-hidden="true">No. 01 — Established Purley, 1975</div>
 
   <div class="hero__inner">
     <div class="hero__content">
-      <div class="hero__eyebrow">Award-Winning Hair Salon · Purley, Surrey</div>
-      <h1 class="hero__title">Hair That<br><em>Turns Heads.</em></h1>
-      <p class="hero__subtitle">Over 50 years of expert colouring, cutting &amp; styling in the heart of Purley — trusted by clients across Surrey.</p>
+      <div class="hero__eyebrow">Purley · Surrey · Est. 1975</div>
+      <h1 class="hero__title"><span class="word">Hair</span> <span class="word">that</span> <span class="word"><em>turns</em></span> <span class="word"><em>heads.</em></span></h1>
+      <p class="hero__subtitle">Over fifty years of expert colouring, cutting &amp; styling — quietly trusted by clients across Surrey.</p>
       <div class="hero__ctas">
         <a href="https://s-iq.co/BookingPortal/dist/?salonid=87d9f85d-e9d9-4cce-bb3a-cd9e79d4d83f&amp;tab=contact" class="btn btn--gold" target="_blank" rel="noopener">Book an Appointment</a>
-        <a href="services.html" class="btn btn--outline">View Services &amp; Prices</a>
+        <a href="services.html" class="link-arrow">Services &amp; Prices <span aria-hidden="true">→</span></a>
       </div>
-      <p style="margin-top:0.75rem;font-size:0.82rem;"><a href="tel:02086688855" style="color:rgba(255,255,255,0.58);">or call 020 8668 8855</a></p>
+      <p class="hero__phone-link">or call <a href="tel:02086688855">020 8668 8855</a></p>
     </div>
-  </div>
-
-  <!-- Carousel controls -->
-  <button class="carousel__btn carousel__btn--prev" aria-label="Previous image">&#8249;</button>
-  <button class="carousel__btn carousel__btn--next" aria-label="Next image">&#8250;</button>
-  <div class="carousel__dots" aria-hidden="true">
-    <span class="carousel__dot carousel__dot--active"></span>
-    <span class="carousel__dot"></span>
-    <span class="carousel__dot"></span>
-    <span class="carousel__dot"></span>
   </div>
 
   <div class="hero__scroll" aria-hidden="true">Scroll</div>
@@ -145,27 +134,27 @@
 
 <!-- ===== INTRO STRIP ===== -->
 <div class="intro-strip">
-  <div class="intro-strip__inner">
+  <div class="intro-strip__inner reveal">
     <span class="eyebrow">Est. 1975</span>
-    <h2>Purley's Most Trusted Hair Salon</h2>
-    <p>From precision cuts to vivid colour transformations, our expert stylists deliver results that turn heads — in a welcoming, relaxed environment where you always leave looking and feeling incredible.</p>
-    <div class="intro-strip__stats">
-      <div class="stat">
-        <span class="stat__number">50+</span>
-        <span class="stat__label">Years in Purley</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number">100%</span>
-        <span class="stat__label">VAT &amp; refresh included</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number">6</span>
-        <span class="stat__label">Days a week</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number">Late</span>
-        <span class="stat__label">Eves Wed &amp; Thu</span>
-      </div>
+    <h2>Purley's most established,<br>confident hair salon.</h2>
+    <p>From precision cuts to considered colour, our stylists work with care, calm and decades of craft — in a room that feels less like a salon, more like somewhere you'd rather stay.</p>
+  </div>
+  <div class="intro-strip__stats reveal">
+    <div class="stat">
+      <span class="stat__number">50+</span>
+      <span class="stat__label">Years in Purley</span>
+    </div>
+    <div class="stat">
+      <span class="stat__number">100<span style="font-size:0.55em;vertical-align:0.3em;">%</span></span>
+      <span class="stat__label">VAT &amp; refresh incl.</span>
+    </div>
+    <div class="stat">
+      <span class="stat__number">Six</span>
+      <span class="stat__label">Days a week</span>
+    </div>
+    <div class="stat">
+      <span class="stat__number">Late</span>
+      <span class="stat__label">Eves Wed &amp; Thu</span>
     </div>
   </div>
 </div>
@@ -173,7 +162,7 @@
 <!-- ===== SERVICES OVERVIEW ===== -->
 <section class="section" id="section-services" aria-labelledby="services-heading">
   <div class="container">
-    <div class="section__header">
+    <div class="section__header reveal">
       <span class="eyebrow">What We Do</span>
       <h2 id="services-heading">Our Hairdressing Services</h2>
       <div class="divider"></div>
@@ -182,56 +171,60 @@
 
     <div class="grid-4">
       <!-- Cutting -->
-      <article class="service-card">
+      <a href="services.html#cutting" class="service-card reveal" data-delay="1">
         <div class="service-card__img">
+          <span class="service-card__num">01</span>
           <img src="Images/service-cutting.jpg" alt="Hair cutting service at Touché Hairdressing Purley" loading="lazy">
         </div>
         <div class="service-card__body">
-          <h3>Hair Cutting</h3>
-          <p>Precision cuts for ladies and gents, shaped to suit your face and lifestyle.</p>
-          <span class="service-card__price">See full price list below</span>
+          <h3>Cutting</h3>
+          <p>Precision cuts for ladies and gents — shaped to suit face, lifestyle and however you want to wear it.</p>
+          <span class="service-card__price">Explore</span>
         </div>
-      </article>
+      </a>
 
       <!-- Colouring -->
-      <article class="service-card">
+      <a href="services.html#colouring" class="service-card reveal" data-delay="2">
         <div class="service-card__img">
+          <span class="service-card__num">02</span>
           <img src="Images/service-colouring.jpg" alt="Hair colouring and highlights at Touché Hairdressing Purley" loading="lazy">
         </div>
         <div class="service-card__body">
-          <h3>Hair Colouring</h3>
-          <p>Highlights, balayage, regrowth, semi-permanent — rich, vibrant colour results that last.</p>
-          <span class="service-card__price">See full price list below</span>
+          <h3>Colouring</h3>
+          <p>Highlights, balayage, regrowth, semi-permanent — considered colour that holds its tone as it grows out.</p>
+          <span class="service-card__price">Explore</span>
         </div>
-      </article>
+      </a>
 
       <!-- Smoothing -->
-      <article class="service-card">
+      <a href="services.html#smoothing" class="service-card reveal" data-delay="3">
         <div class="service-card__img">
+          <span class="service-card__num">03</span>
           <img src="Images/service-smoothing.jpg" alt="Hair smoothing and straightening treatment at Touché Hairdressing Purley" loading="lazy">
         </div>
         <div class="service-card__body">
-          <h3>Smoothing &amp; Straightening</h3>
-          <p>The Crown Pro keratin treatment for frizz-free, manageable hair lasting up to six months.</p>
-          <span class="service-card__price">See full price list below</span>
+          <h3>Smoothing</h3>
+          <p>The Crown Pro keratin treatment — frizz-free, manageable hair that lasts up to six months.</p>
+          <span class="service-card__price">Explore</span>
         </div>
-      </article>
+      </a>
 
       <!-- Extensions -->
-      <article class="service-card">
+      <a href="services.html#extensions" class="service-card reveal" data-delay="4">
         <div class="service-card__img">
+          <span class="service-card__num">04</span>
           <img src="Images/service-extensions.jpg" alt="Hair extensions at Touché Hairdressing Purley" loading="lazy">
         </div>
         <div class="service-card__body">
-          <h3>Hair Extensions</h3>
-          <p>Add length, volume and drama with professional extensions tailored to blend seamlessly.</p>
-          <span class="service-card__price">Consultation required</span>
+          <h3>Extensions</h3>
+          <p>Length, volume, drama — professional extensions tailored to blend seamlessly with your own.</p>
+          <span class="service-card__price">Consultation</span>
         </div>
-      </article>
+      </a>
     </div>
 
-    <div style="text-align:center; margin-top:2.5rem;">
-      <a href="services.html" class="btn btn--dark">View All Services &amp; Prices</a>
+    <div style="text-align:center; margin-top:4rem;">
+      <a href="services.html" class="link-arrow">View all services &amp; prices <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -240,15 +233,14 @@
 <section class="section section--cream" id="section-instagram" aria-label="Instagram feed">
   <div class="container">
 
-    <div class="instagram-feed__header">
+    <div class="instagram-feed__header reveal">
       <div class="instagram-feed__handle">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        <span class="eyebrow" style="margin-bottom:0;">Stay Connected</span>
-        <span>&nbsp;·&nbsp;@touchehairdressingpurley</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        <span>@touchehairdressingpurley</span>
       </div>
-      <h2>Latest from Instagram</h2>
-      <div class="divider"></div>
-      <p style="color:var(--text-light);max-width:500px;margin:0 auto;">Fresh looks, colour transformations and behind-the-scenes from our Purley salon.</p>
+      <span class="eyebrow">Stay Connected</span>
+      <h2>From the chair — lately.</h2>
+      <p>Fresh looks, brilliant colour work, and some quality moments from our Purley salon.</p>
     </div>
 
     <div class="instagram-grid" id="instagram-grid" aria-label="Instagram photos"></div>
@@ -289,7 +281,7 @@
   }
 
   function renderBehold(data) {
-    var posts = (data.posts || data).slice(0, 12);
+    var posts = (data.posts || data).slice(0, 9);
     loading.style.display = 'none';
     posts.forEach(function (post) {
       var sizes  = post.sizes || {};
@@ -392,8 +384,8 @@
       </div>
 
       <!-- About sidebar -->
-      <div style="background:var(--dark);border-radius:12px;padding:2.5rem;color:var(--white);">
-        <span class="eyebrow">Opening Hours</span>
+      <div style="background:var(--espresso);border-radius:0;padding:3rem;color:var(--ivory);">
+        <span class="eyebrow" style="color:var(--gold-light);">Opening Hours</span>
         <table class="hours-table" style="margin-top:1rem; width:100%;">
           <tbody data-cms="hours" data-cms-dark="true">
             <tr><td style="color:rgba(255,255,255,0.5)">Monday</td><td style="color:rgba(255,255,255,0.85)">9am – 5pm</td></tr>
@@ -410,8 +402,8 @@
           <strong style="color:rgba(255,255,255,0.85);">2 High Street</strong>
         </p>
         <p style="font-size:0.9rem;color:rgba(255,255,255,0.55);margin-bottom:1.5rem;">Purley, Surrey, CR8 2AA</p>
-        <a href="https://s-iq.co/BookingPortal/dist/?salonid=87d9f85d-e9d9-4cce-bb3a-cd9e79d4d83f&amp;tab=contact" class="btn btn--gold" style="width:100%;text-align:center;display:block;" target="_blank" rel="noopener">Book Online</a>
-        <p style="margin-top:0.6rem;font-size:0.8rem;text-align:center;"><a href="tel:02086688855" style="color:rgba(255,255,255,0.58);">or call 020 8668 8855</a></p>
+        <a href="https://s-iq.co/BookingPortal/dist/?salonid=87d9f85d-e9d9-4cce-bb3a-cd9e79d4d83f&amp;tab=contact" class="btn" style="width:100%;background:var(--ivory);color:var(--ink);border-color:var(--ivory);" target="_blank" rel="noopener">Book Online</a>
+        <p style="margin-top:0.8rem;font-size:0.8rem;text-align:center;letter-spacing:0.1em;text-transform:uppercase;"><a href="tel:02086688855" style="color:rgba(246,239,229,0.6);">or call 020 8668 8855</a></p>
       </div>
     </div>
   </div>
@@ -428,7 +420,7 @@
 <!-- ===== PRODUCTS ===== -->
 <section class="section" id="section-products" aria-labelledby="products-heading">
   <div class="container">
-    <div class="section__header">
+    <div class="section__header reveal">
       <span class="eyebrow">Professional Products</span>
       <h2 id="products-heading">The Brands We Trust</h2>
       <div class="divider"></div>
@@ -468,15 +460,15 @@
 
 <!-- ===== CTA BAND ===== -->
 <div class="cta-band">
-  <div class="container">
-    <span class="eyebrow" style="display:block;margin-bottom:0.8rem;">Ready for a new look?</span>
-    <h2>Book Your Appointment Today</h2>
+  <div class="container reveal">
+    <span class="eyebrow" style="display:block;margin-bottom:1rem;">Ready when you are</span>
+    <h2>Find your next appointment.</h2>
     <p>Call us, drop in, or send us a message. We'd love to hear from you.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <div style="display:flex;gap:1.6rem;justify-content:center;flex-wrap:wrap;align-items:center;">
       <a href="https://s-iq.co/BookingPortal/dist/?salonid=87d9f85d-e9d9-4cce-bb3a-cd9e79d4d83f&amp;tab=contact" class="btn btn--gold" target="_blank" rel="noopener">Book Online</a>
-      <a href="contact.html" class="btn btn--outline">Send a Message</a>
+      <a href="contact.html" class="link-arrow link-arrow--light">Send a message <span aria-hidden="true">→</span></a>
     </div>
-    <p style="margin-top:0.75rem;font-size:0.82rem;"><a href="tel:02086688855" style="color:rgba(255,255,255,0.58);">or call 020 8668 8855</a></p>
+    <p style="margin-top:1.2rem;font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;"><a href="tel:02086688855" style="color:rgba(246,239,229,0.6);">or call 020 8668 8855</a></p>
   </div>
 </div>
 
@@ -562,6 +554,24 @@
 <script src="js/cookies.js"></script>
 <script src="js/main.js"></script>
 <script src="js/cms.js"></script>
+<script>
+// Scroll-reveal — fade-and-rise for .reveal elements
+(function () {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+}());
+</script>
 <script>
 (function () {
   var btn = document.getElementById('scroll-up-btn');
