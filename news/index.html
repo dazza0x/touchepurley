@@ -80,19 +80,19 @@
     <h2 id="articles-heading" class="sr-only">All articles</h2>
 
     <!-- Featured article -->
-    <article style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:3rem;background:var(--white);">
-      <div class="blog-card__img blog-card__img--autumn" style="height:auto;min-height:320px;" aria-hidden="true"></div>
-      <div style="padding:3rem;display:flex;flex-direction:column;justify-content:center;">
-        <div class="blog-card__meta">11 October 2025 · 2 min read · <span style="background:var(--gold);color:var(--black);padding:0.2rem 0.6rem;border-radius:2px;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-left:0.3rem;">Latest</span></div>
-        <h2 style="font-size:1.8rem;margin:0.8rem 0 1rem;line-height:1.25;">Autumn Trends 2025 — The Cuts &amp; Colours to Know</h2>
-        <p style="color:var(--text-light);font-size:0.97rem;line-height:1.75;margin-bottom:1.5rem;">Bobs are back with a twist, layers are everywhere, and curtain bangs are having their biggest moment yet. Discover the hairstyles defining autumn 2025 — and which might be perfect for you.</p>
+    <article class="news-featured reveal">
+      <div class="blog-card__img blog-card__img--autumn news-featured__img" aria-hidden="true"></div>
+      <div class="news-featured__body">
+        <div class="blog-card__meta">11 October 2025 · 2 min read · <span style="background:var(--gold);color:var(--black);padding:0.2rem 0.6rem;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-left:0.3rem;">Latest</span></div>
+        <h2 class="news-featured__title">Autumn Trends 2025 — The Cuts &amp; Colours to Know</h2>
+        <p class="news-featured__excerpt">Bobs are back with a twist, layers are everywhere, and curtain bangs are having their biggest moment yet. Discover the hairstyles defining autumn 2025 — and which might be perfect for you.</p>
         <a href="autumn-trends-2025.html" class="btn btn--dark" style="align-self:flex-start;">Read the Article</a>
       </div>
     </article>
 
     <!-- Grid of remaining posts -->
     <div class="grid-3">
-      <article class="blog-card">
+      <article class="blog-card reveal">
         <div class="blog-card__img blog-card__img--oligo" aria-hidden="true"></div>
         <div class="blog-card__body">
           <div class="blog-card__meta">9 April 2025 · 1 min read</div>
@@ -105,7 +105,7 @@
         </div>
       </article>
 
-      <article class="blog-card">
+      <article class="blog-card reveal" data-delay="2">
         <div class="blog-card__img blog-card__img--crown" aria-hidden="true"></div>
         <div class="blog-card__body">
           <div class="blog-card__meta">9 April 2025 · 1 min read</div>
@@ -118,7 +118,7 @@
         </div>
       </article>
 
-      <article class="blog-card">
+      <article class="blog-card reveal" data-delay="4">
         <div class="blog-card__img blog-card__img--opc" aria-hidden="true"></div>
         <div class="blog-card__body">
           <div class="blog-card__meta">9 April 2025 · 2 min read</div>

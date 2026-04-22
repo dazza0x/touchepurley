@@ -89,4 +89,33 @@
     }, 8000);
   }
 
+  /* ── Scroll reveal ── */
+  var reveals = document.querySelectorAll('.reveal');
+  if (reveals.length && 'IntersectionObserver' in window) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ── Scroll-up button ── */
+  var scrollUpBtn = document.createElement('button');
+  scrollUpBtn.id = 'scroll-up-btn';
+  scrollUpBtn.setAttribute('aria-label', 'Back to top');
+  scrollUpBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
+  document.body.appendChild(scrollUpBtn);
+  window.addEventListener('scroll', function () {
+    scrollUpBtn.classList.toggle('visible', window.scrollY > 500);
+  }, { passive: true });
+  scrollUpBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
 })();
