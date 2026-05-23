@@ -26,13 +26,21 @@
     });
   }
 
-  /* ── Sticky nav shadow ── */
+  /* ── Sticky nav shadow + scroll-progress accent ── */
   const nav = document.querySelector('.nav');
-  if (nav) {
-    window.addEventListener('scroll', function () {
-      nav.classList.toggle('scrolled', window.scrollY > 20);
-    }, { passive: true });
+  const progress = document.createElement('div');
+  progress.className = 'scroll-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(progress);
+
+  function onScroll() {
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - doc.clientHeight;
+    progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
   }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
   /* ── Active nav link ── */
   const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
@@ -106,16 +114,19 @@
   }
 
   /* ── Scroll-up button ── */
-  var scrollUpBtn = document.createElement('button');
-  scrollUpBtn.id = 'scroll-up-btn';
-  scrollUpBtn.setAttribute('aria-label', 'Back to top');
-  scrollUpBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
-  document.body.appendChild(scrollUpBtn);
-  window.addEventListener('scroll', function () {
-    scrollUpBtn.classList.toggle('visible', window.scrollY > 500);
-  }, { passive: true });
-  scrollUpBtn.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  /* Skip if the page already ships its own (e.g. the homepage's section-stepping button) */
+  if (!document.getElementById('scroll-up-btn')) {
+    var scrollUpBtn = document.createElement('button');
+    scrollUpBtn.id = 'scroll-up-btn';
+    scrollUpBtn.setAttribute('aria-label', 'Back to top');
+    scrollUpBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
+    document.body.appendChild(scrollUpBtn);
+    window.addEventListener('scroll', function () {
+      scrollUpBtn.classList.toggle('visible', window.scrollY > 500);
+    }, { passive: true });
+    scrollUpBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
 })();

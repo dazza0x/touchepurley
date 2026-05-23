@@ -305,6 +305,20 @@ p:last-child { margin-bottom: 0; }
 .nav.scrolled {
   background: rgba(246,239,229,0.98);
   border-bottom-color: rgba(27,18,11,0.12);
+  box-shadow: 0 1px 24px rgba(36,26,19,0.07);
+}
+
+/* Scroll-progress accent — fills the nav's lower edge as the page scrolls */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, var(--clay), var(--gold-light));
+  z-index: 1001;
+  pointer-events: none;
+  transition: width 0.08s linear;
 }
 
 .nav__container {
@@ -516,6 +530,24 @@ p:last-child { margin-bottom: 0; }
   flex-direction: column;
   justify-content: center;
   background: var(--ivory);
+}
+
+/* Crisp editorial seam where photograph meets the ivory panel (desktop split only) */
+@media (min-width: 1025px) {
+  .hero__inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(201,175,151,0.55) 18%,
+      rgba(201,175,151,0.55) 82%,
+      transparent 100%);
+    z-index: 3;
+  }
 }
 
 .hero__content {
@@ -936,7 +968,7 @@ p:last-child { margin-bottom: 0; }
 
 .service-card:hover .service-card__img img {
   filter: saturate(1.05) contrast(1.02) brightness(1.02);
-  transform: none;
+  transform: scale(1.05);
 }
 
 /* Small serial numeral over the image — editorial touch */
@@ -1748,7 +1780,21 @@ p:last-child { margin-bottom: 0; }
   position: relative;
 }
 
+.footer__col ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+
 .footer__col ul li a:hover { color: var(--gold-light); }
+.footer__col ul li a:hover::after { transform: scaleX(1); }
 
 .footer__col p {
   font-size: 0.92rem;
@@ -2020,13 +2066,13 @@ p:last-child { margin-bottom: 0; }
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: filter 800ms var(--ease);
+  transition: filter 800ms var(--ease), transform 1200ms var(--ease);
   filter: saturate(0.85) contrast(0.97);
 }
 
 .instagram-grid__item:hover img {
   filter: saturate(1.05) contrast(1.02);
-  transform: none;
+  transform: scale(1.06);
 }
 
 .instagram-grid__overlay {
